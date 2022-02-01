@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+
+:root {
+    /* colors */
+    --white: hsl(0, 0%, 100%);
+    --violet-500-original: hsla(263, 55%, 52%, 0.815);
+    --blue-700: hsl(217, 19%, 35%);
+    --blue-800: hsl(219, 29%, 14%);
+    
+    --gray-300: hsl(0, 0%, 81%);
+    --blue-100: hsl(210, 46%, 95%);
+
+    /* custom */
+    --violet-500: hsla(263, 55%, 52%, 1);
+    --blue-700-shadow:hsla(219, 9%, 61%, 0.678);
+    --violet-500-border: hsl(263, 94%, 79%);
+    --true-bg-color: hsl(246, 43%, 83%);
+    /* Note for text colors:
+
+    1. "Verified Graduate" has the same color as the person's name with 50% opacity
+    2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity 
+    */
+
+
+    /* typography */
+    --fs-base: 13px;
+    --family:  'Barlow Semi Condensed', sans-serif;
+    --weight-normal: 500;
+    --weight-bold: 600;
+
+    /* borders */
+    --radii: 0.6rem;
+    --radii-full: 50%;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.attribution { margin-top: 8rem; margin-bottom: 4rem; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: var(--blue-100);
+    font-size: var(--fs-base);
+    font-family: var(--family);
+    font-weight: var(--weight-normal);
+}
+
+.review-container {
+    height: 100%;
+    width: 100%;
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+}
+
+.review {
+    border-radius: var(--radii);
+    padding: 1.5rem 1.8rem;
+    margin-top: 2rem;
+    box-shadow: 0 0.8rem 1rem var(--blue-700-shadow);
+}
+
+.review__author {
+    display: flex;
+    align-items: center;
+}
+
+.review__author__img {
+    height: 32px;
+    width: 32px;
+    border-radius: var(--radii-full);
+    border: 2px solid var(--gray-300);
+    
+}
+
+.review__author__text {
+    margin-left: 1rem;
+}
+
+.review__author__name {
+    
+}
+
+
+.review__author__job {
+    font-size: calc(var(--fs-base)*0.9);
+    opacity: 50%;
+}
+
+.review.text-white .review__author__name,
+.review.text-white .review__author__job,
+.review.text-white .review__title,
+.review.text-white .review__text
+{
+    color: var(--blue-100);    
+}
+
+.review.text-dark .review__author__name,
+.review.text-dark .review__author__job,
+.review.text-dark .review__title,
+.review.text-dark .review__text {
+    color: var(--blue-700);
+}
+
+.review.purple {
+    background-color: var(--violet-500);
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position-x: right 10%;
+}
+
+.review.purple .review__author__img {
+    border-color: var(--violet-500-border);
+}
+
+.review.gray {
+    background-color: var(--blue-700);
+}
+
+.review.black {
+    background-color: var(--blue-800);
+}
+
+.review.black .review__author__img {
+    border-color: var(--violet-500);
+}
+
+.review.white {
+    background-color: var(--white);
+}
+
+.review.white .review__author__img {
+    border-color: var(--white);
+}
+
+
+
+.review__title {
+    font-weight: var(--weight-bold);
+    opacity: 95%;
+    font-size: calc(var(--fs-base)*1.6);
+}
+
+.review__text { 
+    opacity: 50%;
+    margin: 1rem 0;
+    line-height: 1.5;
+}
