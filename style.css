@@ -43,11 +43,16 @@
 .attribution a { color: hsl(228, 45%, 44%); }
 
 main {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
     height: 100%;
     width: 100%;
 }
 
 body {
+    padding-top: 5rem;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -67,11 +72,15 @@ body {
     justify-content: center;
 
     padding: 1.5rem;
+
+    max-width: 375px;
 }
 
 .review {
+    width: 100%;
+    height: 100%;
     border-radius: var(--radii);
-    padding: 1.5rem 1.8rem;
+    padding: 1.5rem 1.6rem;
     margin-top: 2rem;
     box-shadow: 0 0.8rem 1rem var(--blue-700-shadow);
 }
@@ -149,8 +158,6 @@ body {
     border-color: var(--white);
 }
 
-
-
 .review__title {
     font-weight: var(--weight-bold);
     opacity: 95%;
@@ -161,4 +168,49 @@ body {
     opacity: 50%;
     margin: 1rem 0;
     line-height: 1.5;
+    font-size: var(--fs-base);
+}
+
+@media only screen and (min-width: 1250px)  {
+    .review-container {
+        display: grid;
+        gap: 2rem;
+        height: 600px;
+        max-width: 1150px;
+
+    }
+
+    .review {
+        margin-top: 0;
+    }
+    
+    #daniel {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+
+    #jonathan {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+    }
+
+    #jeanette {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    #patrick {
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+    }
+
+    #kira {
+        grid-column: 5 / 6;
+        grid-row: 1 / 3;
+    }
+
+
+
+
+    
 }
