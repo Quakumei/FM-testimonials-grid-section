@@ -102,10 +102,6 @@ body {
     margin-left: 1rem;
 }
 
-.review__author__name {
-    
-}
-
 
 .review__author__job {
     font-size: calc(var(--fs-base)*0.9);
@@ -208,9 +204,4 @@ body {
         grid-column: 5 / 6;
         grid-row: 1 / 3;
     }
-
-
-
-
-    
 }
