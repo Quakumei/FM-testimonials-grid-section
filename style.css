@@ -127,7 +127,7 @@ body {
     background-color: var(--violet-500);
     background-image: url("images/bg-pattern-quotation.svg");
     background-repeat: no-repeat;
-    background-position-x: right 10%;
+    background-position-x: right 25%;
 }
 
 .review.purple .review__author__img {
@@ -168,13 +168,12 @@ body {
     font-weight: var(--weight-bold);
 }
 
-@media only screen and (min-width: 1250px)  {
+@media only screen and (min-width: 900px)  {
     .review-container {
         display: grid;
         gap: 2rem;
-        height: 600px;
+        min-height: 600px;
         max-width: 1150px;
-
     }
 
     .review {
